@@ -4,6 +4,10 @@ This script outputs realistic-looking Apache logs by simulating user browsing be
 
 By default, these will be sent to standard out as they're generated, meaning the logs will be locally ordered by time within a particular user's session, but not globally ordered among all sessions.  However, specifying `-s` or `--sort` at run time will result in a temporary SQLite database being created and then read from in order to output the logs in chronological time.
 
+History
+=======
+This script came out of a presentation by CTSC during an [engagement with Cal Poly Pomona](http://blog.trustedci.org/search/label/sfs), where we presented a workshop for cybersecurity students in the Scholarship for Service program.  In order to provide a realistic hands on exercise looking for potential indicators of compromise in logs, we first needed a way of generating a lot of logs that looked like normal user traffic.
+
 Site Structure Configuration
 ============================
 The configuration of the simulated website is specified in `pages.conf`, or in another file specified as an argument at runtime (using `-p <file>` or `--pages <file>`).  Links as well as included content (images, css, scripts) can be specified on a per-page basis or globally included on all pages.
