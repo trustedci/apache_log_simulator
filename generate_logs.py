@@ -114,17 +114,24 @@ def prep_settings(config_file):
     # Load start date, calculate end date
     year, month, day = config.get('General', 'start_date').split('-')
     start_date = date(int(year), int(month), int(day))
-    end_date = start_date + timedelta(days=6)
+    year, month, day = config.get('General', 'end_date').split('-')
+    end_date = date(int(year), int(month), int(day))
 
     # Calculate date probability weights
     day = start_date
+    weight_sums = 0.0
     while day <= end_date:
         day_weights[day] = None
         if day.isoweekday() < 6:
             day_weights[day] = .176
         else:
             day_weights[day] = .06
+        weight_sums += day_weights[day]
         day = day + timedelta(days=1)
+
+    # Now we need to normalize the weights so they add to 1
+    for day in day_weights:
+        day_weights[day] = day_weights[day] / weight_sums
 
     # Load the weights for hours of the day
     for x in range(0, 22):
@@ -181,6 +188,10 @@ def prep_pages(config_file):
                 links = list(set([l.strip() for l in links]).union(global_links))
             elif global_links:
                 links = list(global_links)
+
+            # Make sure we remove any links from this page to itself
+            if section in links:
+                links.remove(section)
 
             site_pages[section] = Page(starting_proto, domain, section, size=size, links=links)
 
