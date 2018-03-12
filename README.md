@@ -41,15 +41,15 @@ Probabilities include, among other options:
 
 Sample Output
 =============
-Below is a sample of log entries for one particular "browsing session" produced using the example pages.conf and settings.conf included in the GitHub repository.  IP addresses have been removed but real output from the script would include Internet routeable source addresses.
+Below is a sample of log entries for one particular "browsing session" produced using the example pages.conf and settings.conf included in the GitHub repository.  **Please note** that IP addresses are generated randomly from within the script and not based on real information.  Any relation to activity in the real world is purely coincidental.
 
-    x.x.x.x - - [22/Mar/2017:09:47:55 -0500] "GET /chemistry.php HTTP/1.1" 200 2341 "https://www.google.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
-    x.x.x.x - - [22/Mar/2017:09:47:55 -0500] "GET /style/science.css HTTP/1.1" 200 520 "http://www.example.com/chemistry.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
-    x.x.x.x - - [22/Mar/2017:09:47:55 -0500] "GET /style/main.css HTTP/1.1" 200 341 "http://www.example.com/chemistry.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
-    x.x.x.x - - [22/Mar/2017:09:47:55 -0500] "GET /images/header_bg.jpg HTTP/1.1" 200 725 "http://www.example.com/chemistry.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
-    x.x.x.x - - [22/Mar/2017:09:49:04 -0500] "GET /resources.php HTTP/1.1" 200 5839 "http://www.example.com/chemistry.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
-    x.x.x.x - - [22/Mar/2017:09:52:12 -0500] "GET / HTTP/1.1" 200 8081 "http://www.example.com/resources.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
-    x.x.x.x - - [22/Mar/2017:09:52:58 -0500] "GET /about.php HTTP/1.1" 200 4931 "http://www.example.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+    201.4.67.130 - - [22/Mar/2017:09:47:55 -0500] "GET /chemistry.php HTTP/1.1" 200 2341 "https://www.google.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+    201.4.67.130 - - [22/Mar/2017:09:47:55 -0500] "GET /style/science.css HTTP/1.1" 200 520 "http://www.example.com/chemistry.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+    201.4.67.130 - - [22/Mar/2017:09:47:55 -0500] "GET /style/main.css HTTP/1.1" 200 341 "http://www.example.com/chemistry.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+    201.4.67.130 - - [22/Mar/2017:09:47:55 -0500] "GET /images/header_bg.jpg HTTP/1.1" 200 725 "http://www.example.com/chemistry.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+    201.4.67.130 - - [22/Mar/2017:09:49:04 -0500] "GET /resources.php HTTP/1.1" 200 5839 "http://www.example.com/chemistry.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+    201.4.67.130 - - [22/Mar/2017:09:52:12 -0500] "GET / HTTP/1.1" 200 8081 "http://www.example.com/resources.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+    201.4.67.130 - - [22/Mar/2017:09:52:58 -0500] "GET /about.php HTTP/1.1" 200 4931 "http://www.example.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
     
 Limitations
 ===========
