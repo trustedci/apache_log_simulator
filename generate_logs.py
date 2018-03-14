@@ -360,9 +360,9 @@ if __name__ == '__main__':
                                                         ' disk, in kilobytes')
     arg_group.add_argument('-m', '--mb', type=int, help='estimated amount of disk to take up once files are written to'
                                                         ' disk, in megabytes', )
-    arg_group.add_argument('-c', '--config', type=str, help='general configuration file (defaults to settings.conf)',
+    parser.add_argument('-c', '--config', type=str, help='general configuration file (defaults to settings.conf)',
                            default='settings.conf')
-    arg_group.add_argument('-p', '--pages', type=str, help='site pages configuration file (defaults to pages.conf)',
+    parser.add_argument('-p', '--pages', type=str, help='site pages configuration file (defaults to pages.conf)',
                            default='pages.conf')
     parser.add_argument('-s', '--sort', action='store_true', help='sort the output by timestamp (defaults to false)',
                         default=False)
